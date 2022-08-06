@@ -16,6 +16,7 @@
 #include "launcher.h"
 #include "math.h"
 #include "menu.h"
+#include "eyeball.h"
 #include "nametag.h"
 #include "pax_codecs.h"
 #include "pax_gfx.h"
@@ -48,6 +49,7 @@ typedef enum action {
     ACTION_APPS,
     ACTION_LAUNCHER,
     ACTION_HATCHERY,
+    ACTION_EYE,
     ACTION_NAMETAG,
     ACTION_DEV,
     ACTION_SETTINGS,
@@ -155,6 +157,8 @@ void menu_start(const char* version) {
         if (action != ACTION_NONE) {
             if (action == ACTION_HATCHERY) {
                 menu_hatchery();
+            } else if (action == ACTION_EYE) {
+                show_eyeball();
             } else if (action == ACTION_NAMETAG) {
                 show_nametag();
             } else if (action == ACTION_SETTINGS) {

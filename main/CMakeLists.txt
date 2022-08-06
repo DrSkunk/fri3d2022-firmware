@@ -12,6 +12,7 @@ idf_component_register(
          "menus/wifi.c"
          "menus/sao.c"
          "menus/launcher.c"
+         "eyeball.c"
          "nametag.c"
          "file_browser.c"
          "test_common.c"
